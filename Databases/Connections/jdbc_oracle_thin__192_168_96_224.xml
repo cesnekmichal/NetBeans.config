@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<!DOCTYPE connection PUBLIC '-//NetBeans//DTD Database Connection 1.2//EN' 'http://www.netbeans.org/dtds/connection-1_2.dtd'>
+<connection>
+  <driver-class value='oracle.jdbc.OracleDriver'/>
+  <driver-name value='OracleThin'/>
+  <database-url value='jdbc:oracle:thin:@192.168.96.224:49161:xe'/>
+  <schema value='SYSTEM'/>
+  <user value='system'/>
+  <use-scrollable-cursors value='true'/>
+</connection>

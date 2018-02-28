@@ -1,0 +1,2 @@
+SELECT * FROM ( select * from A_TANKFA_01.MEASUREMENT order by MESID DESC ) WHERE ROWNUM<=10;
+

@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+<!DOCTYPE connection PUBLIC '-//NetBeans//DTD Database Connection 1.2//EN' 'http://www.netbeans.org/dtds/connection-1_2.dtd'>
+<connection>
+  <driver-class value='org.firebirdsql.jdbc.FBDriver'/>
+  <driver-name value='Firebird (JCA/JDBC driver)'/>
+  <database-url value='jdbc:firebirdsql://localhost:3050/C:\UNIDATAZ\UniPOS.NBp\run\firebird\UNIPOS.FDB?userName=UniPOS&amp;password=UniPOS&amp;lc_ctype=UTF8'/>
+  <schema value=''/>
+  <user value='UniPOS'/>
+  <display-name value='Firebird'/>
+  <use-scrollable-cursors value='false'/>
+</connection>

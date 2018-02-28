@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="code_evaluator">
+        <attr name="WinSys-TCRef-Order" stringvalue="evaluatorPane"/>
+    </fileobject>
+    <fileobject name="commonpalette">
+        <attr name="WinSys-TCRef-Order" stringvalue="CommonPalette"/>
+        <attr name="_palette_visible_" boolvalue="true"/>
+        <attr name="_palette_visible_FormDesignerPalette" boolvalue="true"/>
+        <attr name="_palette_visible__empty_" boolvalue="false"/>
+        <attr name="_palette_visible_ireport/palette" boolvalue="true"/>
+    </fileobject>
+    <fileobject name="editor">
+        <attr name="WinSys-TCRef-Order" stringvalue="MultiView-java#002Eso10CA9CC4xt#002Ehistory#007C_4/CoverageReportTopComponent/MultiView-java#007Cja255427C4xt#002Ehistory#007C_4/MultiView-java#007Cja255427C5xt#002Ehistory#007C_5/MultiView-java#002Eso888FB95t#002Ehistory#007C_16/MultiView-java#002Eso888FB96t#002Ehistory#007C_17/MultiView-java#007Cja255427C6xt#002Ehistory#007C_6/MultiView-java#007Cja255427C7xt#002Ehistory#007C_7/MultiView-java#002Eso888FBB0t#002Ehistory#007C_22/MultiView-java#002Eso888FBB1t#002Ehistory#007C_23/MultiView-java#002Eso888FBB3t#002Ehistory#007C_25/MultiView-java#007Cja255427C8xt#002Ehistory#007C_8/MultiView-java#002Eso888FBB4t#002Ehistory#007C_26/MultiView-java#007Cja255427C9xt#002Ehistory#007C_9/MultiView-java#007Cja8530D08Ft#002Ehistory#007C_10/MultiView-java#002Eso888FBB7t#002Ehistory#007C_29/MultiView-java#002Eso888FBCEt#002Ehistory#007C_31/MultiView-java#002Eso888FC11t#002Ehistory#007C_56/MultiView-java#002Eso888FC50t#002Ehistory#007C_77/MultiView-java#002Eso888FC6Dt#002Ehistory#007C_85/MultiView-java#002Eso89676A7#002Ehistory#007C_117/MultiView-java#002Eso8967743#002Ehistory#007C_168/MultiView-java#002Eso896775C#002Ehistory#007C_172/MultiView-java#002Eso896775D#002Ehistory#007C_173/MultiView-java#002Eso896775F#002Ehistory#007C_175/MultiView-java#002Eso8967760#002Ehistory#007C_176/MultiView-java#002Eso8967761#002Ehistory#007C_177/MultiView-java#002Eso8967762#002Ehistory#007C_178/MultiView-java#002Eso8967763#002Ehistory#007C_179/HQLEditorTopComponent/dbgInstances"/>
+    </fileobject>
+    <fileobject name="explorer">
+        <attr name="WinSys-TCRef-Order" stringvalue="projectTabLogical_tc/projectTab_tc/services/debuggingView/favorites/DashboardTopComponent"/>
+    </fileobject>
+    <fileobject name="navigator">
+        <attr name="WinSys-TCRef-Order" stringvalue="navigatorTC/DomTC"/>
+    </fileobject>
+    <fileobject name="output">
+        <attr name="WinSys-TCRef-Order" stringvalue="output/find-usages/search-results/breakpointsView/gsf-testrunner-results/hgversioningTC/NotificationCenterTopComponent/AnalysisResultTopComponent/localsView/watchesView/resultsView/callstackView/classes/sources/sessionsView/threadsView/bookmarks/eventsView/profiler_pp/versioning_output/refactoring-preview/CallHierarchyTopComponent/AnalyzerTopComponent/JavadocTopComponent/TerminalContainerTopComponent/svnversioning/GitVersioning/GitRepositories/TaskListTopComponent/ReporterResultTopComponent"/>
+    </fileobject>
+    <fileobject name="properties">
+        <attr name="WinSys-TCRef-Order" stringvalue="AnalyzeStackTopComponent/CssStylesTC/JavaHierarchyTopComponent/KnockoutTC"/>
+    </fileobject>
+    <fileobject name="rightSlidingSide">
+        <attr name="WinSys-TCRef-Order" stringvalue="properties"/>
+    </fileobject>
+</attributes>

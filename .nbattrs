@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="">
+        <attr name="Menu\BuildProject\Report preview\position" intvalue="2200"/>
+        <attr name="Menu\BuildProject\SeparatorBuildProject.instance\position" intvalue="500"/>
+        <attr name="Menu\BuildProject\SeparatorBuildProjectEnd.instance\position" intvalue="800"/>
+        <attr name="Menu\BuildProject\SeparatorCompileSingle.instance\position" intvalue="2100"/>
+        <attr name="Menu\BuildProject\SeparatorMainProject.instance\position" intvalue="1100"/>
+        <attr name="Menu\BuildProject\SeparatorSingle.instance\position" intvalue="1800"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-project-ui-BuildMainProject.shadow\position" intvalue="600"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-project-ui-CompileSingle.shadow\position" intvalue="1500"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-project-ui-JavadocProject.shadow\position" intvalue="1200"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-project-ui-RebuildMainProject.shadow\position" intvalue="700"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-project-ui-Rerun.shadow\position" intvalue="1900"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-project-ui-RunMainProject.shadow\position" intvalue="300"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-project-ui-RunSingle.shadow\position" intvalue="1300"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-project-ui-SetMainProject.shadow\position" intvalue="1000"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-project-ui-TestProject.shadow\position" intvalue="400"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-project-ui-TestSingle.shadow\position" intvalue="1400"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-project-ui-actions-ActiveConfigAction.shadow\position" intvalue="900"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-project-ui-actions-StopBuildingAction.shadow\position" intvalue="2000"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-xml-tools-actions-CheckAction.shadow\position" intvalue="1600"/>
+        <attr name="Menu\BuildProject\org-netbeans-modules-xml-tools-actions-ValidateAction.shadow\position" intvalue="1700"/>
+        <attr name="Services\DiffProviders\org-netbeans-modules-diff-builtin-provider-BuiltInDiffProvider.settings\position" intvalue="100"/>
+        <attr name="Services\DiffProviders\org-netbeans-modules-diff-cmdline-CmdlineDiffProvider.settings\position" intvalue="100"/>
+        <attr name="Spellcheckers\GSP\Hidden" boolvalue="false"/>
+        <attr name="Spellcheckers\HTML\Hidden" boolvalue="false"/>
+        <attr name="Spellcheckers\JSP\Hidden" boolvalue="false"/>
+        <attr name="Spellcheckers\Javadoc\Hidden" boolvalue="false"/>
+        <attr name="Spellcheckers\PHP\Hidden" boolvalue="false"/>
+        <attr name="Spellcheckers\Plain\Hidden" boolvalue="false"/>
+        <attr name="Spellcheckers\Properties\Hidden" boolvalue="false"/>
+        <attr name="Spellcheckers\XHTML\Hidden" boolvalue="false"/>
+    </fileobject>
+    <fileobject name="Editors">
+        <attr name="currentFontColorProfile" stringvalue="NetBeans"/>
+    </fileobject>
+    <fileobject name="Keymaps">
+        <attr name="currentKeymap" stringvalue="NetBeans"/>
+    </fileobject>
+</attributes>

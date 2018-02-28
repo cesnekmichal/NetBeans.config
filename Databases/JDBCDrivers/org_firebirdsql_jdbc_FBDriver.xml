@@ -1,0 +1,13 @@
+<?xml version='1.0'?>
+<!DOCTYPE driver PUBLIC '-//NetBeans//DTD JDBC Driver 1.1//EN' 'http://www.netbeans.org/dtds/jdbc-driver-1_1.dtd'>
+<driver>
+  <name value='Firebird (JCA/JDBC driver)'/>
+  <display-name value='Firebird (JCA/JDBC driver)'/>
+  <class value='org.firebirdsql.jdbc.FBDriver'/>
+  <urls>
+    <url value='file:/C:/UNIDATAZ/UniPOS.NBp/lib/database-jayBird/Classpath/lib/antlr-runtime-3.4.jar'/>
+    <url value='file:/C:/UNIDATAZ/UniPOS.NBp/lib/database-jayBird/Classpath/lib/connector-api-1.5.jar'/>
+    <url value='file:/C:/UNIDATAZ/UniPOS.NBp/lib/database-jayBird/Classpath/lib/log4j-core.jar'/>
+    <url value='file:/C:/UNIDATAZ/UniPOS.NBp/lib/database-jayBird/Classpath/jaybird-2.2.10.jar'/>
+  </urls>
+</driver>

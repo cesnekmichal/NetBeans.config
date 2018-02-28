@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<!DOCTYPE driver PUBLIC '-//NetBeans//DTD JDBC Driver 1.1//EN' 'http://www.netbeans.org/dtds/jdbc-driver-1_1.dtd'>
+<driver>
+  <name value='Oracle Thin (1)'/>
+  <display-name value='Oracle Thin (1)'/>
+  <class value='oracle.jdbc.OracleDriver'/>
+  <urls>
+    <url value='file:/C:/UNIDATAZ/UniPOS.plugin.TPCA.NBp/lib/database-oracle11g/ojdbc7.jar'/>
+  </urls>
+</driver>

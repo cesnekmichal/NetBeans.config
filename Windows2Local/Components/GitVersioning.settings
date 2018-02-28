@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+    <module name="org.netbeans.modules.git" spec="1.22.1.1"/>
+    <instanceof class="java.awt.Component"/>
+    <instanceof class="java.awt.Container"/>
+    <instanceof class="java.awt.MenuContainer"/>
+    <instanceof class="java.awt.image.ImageObserver"/>
+    <instanceof class="java.beans.PropertyChangeListener"/>
+    <instanceof class="java.io.Externalizable"/>
+    <instanceof class="java.io.Serializable"/>
+    <instanceof class="java.lang.Object"/>
+    <instanceof class="java.util.EventListener"/>
+    <instanceof class="javax.accessibility.Accessible"/>
+    <instanceof class="javax.swing.JComponent"/>
+    <instanceof class="javax.swing.TransferHandler$HasGetTransferHandler"/>
+    <instanceof class="org.netbeans.modules.git.ui.status.GitVersioningTopComponent"/>
+    <instanceof class="org.openide.util.HelpCtx$Provider"/>
+    <instanceof class="org.openide.util.Lookup$Provider"/>
+    <instanceof class="org.openide.windows.TopComponent"/>
+    <serialdata class="org.netbeans.modules.git.ui.status.GitVersioningTopComponent">
+        ACED0005737200296F72672E6F70656E6964652E77696E646F77732E546F70436F6D706F6E656E74245265706C6163657284
+        874494BDDF6D64030000787074003C6F72672E6E65746265616E732E6D6F64756C65732E6769742E75692E7374617475732E
+        47697456657273696F6E696E67546F70436F6D706F6E656E747372000F6A6176612E6C616E672E53686F7274684D37133460
+        DA5202000153000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B020000787000017704
+        00000001740027476974202D20556E69504F532E636F6D6D6F6E732D766673322D63696673202D206D617374657271007E00
+        0670740018556E69504F532E636F6D6D6F6E732D766673322D636966737572000F5B4C6A6176612E696F2E46696C653BA8B9
+        5E19FC3005020200007870000000017372000C6A6176612E696F2E46696C65042DA4450E0DE4FF0300014C00047061746874
+        00124C6A6176612F6C616E672F537472696E673B7870740024433A5C554E49444154415A5C556E69504F532E636F6D6D6F6E
+        732D766673322D636966737702005C7878
+    </serialdata>
+</settings>

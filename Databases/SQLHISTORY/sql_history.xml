@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><history><sql date="1504536381532" url="jdbc:postgresql://fserver:5432/unipos_mc">WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.type_name = BKP_A_81.type_name
+    AND PARAMS.type_string254 = BKP_A_81.type_string254</sql><sql date="1504525658717" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT sum(ln(abs(hex_md5_to_bigint(md5(setting.key254::text)))+1500000)), sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))) FROM setting</sql><sql date="1504535936634" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT count(*) FROM PARAMS 
+WHERE NOT EXISTS(SELECT * from BKP_A_81 WHERE PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID)</sql><sql date="1504525240664" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT ln(sum(hex_md5_to_bigint(md5(setting.blob_value::text)))), sum(abs(hex_md5_to_bigint(md5(setting.blob_value::text)))) FROM setting</sql><sql date="1504526134436" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT sum(ln(abs(hex_md5_to_bigint(md5(customer.primary_id::text))))) FROM customer</sql><sql date="1504525023081" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT md5(params.client_id::text) FROM "public".params</sql><sql date="1504531738837" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT p.client_id from "public".params p
+where not exists(
+    SELECT p2.client_id from "public".bkp_a_81 p2 where p.client_id = p2.client_id
+)</sql><sql date="1504536107979" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT count(*) FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.type_name = BKP_A_81.type_name
+    AND PARAMS.type_string254 = BKP_A_81.type_string254
+    AND PARAMS.type_integer = BKP_A_81.type_integer
+                    )</sql><sql date="1504536449909" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT * FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.type_name = BKP_A_81.type_name
+    AND PARAMS.type_string254 = BKP_A_81.type_string254
+                        )</sql><sql date="1504536465255" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT * FROM "public".bkp_a_81 LIMIT 3000</sql><sql date="1507526255814" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT datname, age(datfrozenxid) FROM pg_database WHERE pg_database.datname = 'unipos_mc'</sql><sql date="1504590935034" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*)
+FROM (
+    (
+        SELECT * FROM "public".DISPNOTE_PRICES
+        EXCEPT 
+        SELECT * FROM "public".bkp_a_55
+    )
+    UNION 
+    (
+        SELECT * FROM "public".bkp_a_55
+        EXCEPT 
+        SELECT * FROM "public".DISPNOTE_PRICES
+    )
+) as union_sub_query</sql><sql date="1504530042845" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT * FROM "public".bkp_a_81</sql><sql date="1504528232561" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.id::text,'md5'))),
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_group_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_designation,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.amount,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.measure_unit,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.measure_unit_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.currency,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_unit_price_with_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_unit_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_total_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_total_price_with_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_price_with_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_price_with_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_cost_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_cost_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.price_type,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Modification,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.ModificationType,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.ModificationValue,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_Code,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_TaxRate,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_coeficient,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Code,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.DutyRate_Code,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Rate,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Units,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.invalid_price_type_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_login,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_fullname,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_reason,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.invalid_price_time,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.store_price_type_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.store_price,'md5')))  
+FROM DISPNOTE_PRICES LIMIT 1500</sql><sql date="1505458038280" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT GETDATE()</sql><sql date="1504531774197" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*) FROM (
+    SELECT p.client_id from "public".params p
+    where not exists(
+        SELECT p2.client_id from "public".bkp_a_81 p2 where p.client_id = p2.client_id
+    )
+) as union_sub_query</sql><sql date="1505365732356" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT * FROM "public".meta_data LIMIT 3000</sql><sql date="1504530704396" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*)
+FROM (
+SELECT params.client_id,params.user_id,params.unique_name,params.type_name,params.type_string254
+FROM "public".params
+EXCEPT ALL
+SELECT bkp_a_81.client_id,bkp_a_81.user_id,bkp_a_81.unique_name,bkp_a_81.type_name,bkp_a_81.type_string254
+FROM "public".bkp_a_81
+) as union_sub_query</sql><sql date="1504527460574" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.id::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.product_group_id::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.product_id::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.product_designation::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.amount::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.measure_unit::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.measure_unit_id::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.currency::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.basic_unit_price_with_vat::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.basic_unit_price_without_vat::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.basic_total_price_without_vat::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.basic_total_price_with_vat::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.unit_price_with_vat::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.unit_price_without_vat::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.total_price_without_vat::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.total_price_with_vat::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.unit_cost_price_without_vat::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.total_cost_price_without_vat::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.price_type::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.Modification::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.ModificationType::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.ModificationValue::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.VAT_Code::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.VAT_TaxRate::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.VAT_coeficient::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.VAT::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.Excise_Code::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.DutyRate_Code::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.Excise::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.Excise_Rate::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.Excise_Units::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.invalid_price_type_id::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.problem_author_id::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.problem_author_login::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.problem_author_fullname::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.problem_reason::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.invalid_price_time::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.store_price_type_id::text))))) ,  sum(ln(abs(hex_to_bigint(md5( DISPNOTE_PRICES.store_price::text)))))  FROM DISPNOTE_PRICES</sql><sql date="1504536104131" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT count(*) FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.type_name = BKP_A_81.type_name
+    AND PARAMS.type_string254 = BKP_A_81.type_string254
+    AND PARAMS.type_integer = BKP_A_81.type_integer
+    AND PARAMS.type_double = BKP_A_81.type_double
+    AND PARAMS.type_decimal = BKP_A_81.type_decimal
+            )</sql><sql date="1504528188854" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.id::text,'md5'))),
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_group_id::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_id::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_designation::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.amount::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.measure_unit::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.measure_unit_id::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.currency::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_unit_price_with_vat::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_unit_price_without_vat::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_total_price_without_vat::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_total_price_with_vat::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_price_with_vat::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_price_without_vat::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_price_without_vat::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_price_with_vat::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_cost_price_without_vat::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_cost_price_without_vat::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.price_type::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Modification::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.ModificationType::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.ModificationValue::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_Code::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_TaxRate::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_coeficient::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Code::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.DutyRate_Code::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Rate::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Units::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.invalid_price_type_id::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_id::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_login::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_fullname::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_reason::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.invalid_price_time::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.store_price_type_id::text,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.store_price::text,'md5')))  
+FROM DISPNOTE_PRICES LIMIT 1500</sql><sql date="1504525426343" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT sum(ln(abs(hex_md5_to_bigint(md5(setting.key254::text))))) + sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))) FROM setting</sql><sql date="1504590832227" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*)
+FROM (
+    (
+        SELECT * FROM "public".DISPNOTE_PRICES
+        EXCEPT 
+        SELECT * FROM "public".bkp_a_55
+    )
+    UNION ALL
+    (
+        SELECT * FROM "public".bkp_a_55
+        EXCEPT 
+        SELECT * FROM "public".DISPNOTE_PRICES
+    )
+) as union_sub_query</sql><sql date="1504531931020" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.id::bytea,'md5'))),
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_group_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_designation,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.amount,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.measure_unit,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.measure_unit_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.currency,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_unit_price_with_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_unit_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_total_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_total_price_with_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_price_with_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_price_with_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_cost_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_cost_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.price_type,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Modification,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.ModificationType,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.ModificationValue,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_Code,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_TaxRate,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_coeficient,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Code,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.DutyRate_Code,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Rate,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Units,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.invalid_price_type_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_login,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_fullname,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_reason,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.invalid_price_time,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.store_price_type_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.store_price,'md5')))  
+FROM DISPNOTE_PRICES LIMIT 1500</sql><sql date="1504526093101" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT * FROM "public".customer LIMIT 3000</sql><sql date="1504530462715" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*)
+FROM (
+SELECT params.client_id FROM "public".params
+EXCEPT ALL
+SELECT bkp_a_81.client_id FROM "public".bkp_a_81
+) as union_sub_query</sql><sql date="1504527664680" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.id::text)),
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.product_group_id::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.product_id::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.product_designation::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.amount::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.measure_unit::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.measure_unit_id::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.currency::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.basic_unit_price_with_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.basic_unit_price_without_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.basic_total_price_without_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.basic_total_price_with_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.unit_price_with_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.unit_price_without_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.total_price_without_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.total_price_with_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.unit_cost_price_without_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.total_cost_price_without_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.price_type::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.Modification::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.ModificationType::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.ModificationValue::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.VAT_Code::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.VAT_TaxRate::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.VAT_coeficient::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.VAT::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.Excise_Code::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.DutyRate_Code::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.Excise::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.Excise_Rate::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.Excise_Units::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.invalid_price_type_id::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.problem_author_id::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.problem_author_login::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.problem_author_fullname::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.problem_reason::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.invalid_price_time::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.store_price_type_id::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.store_price::text))  
+FROM DISPNOTE_PRICES LIMIT 500</sql><sql date="1504530167296" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT params.client_id FROM "public".params
+UNION
+SELECT params.client_id FROM "public".bkp_a_81
+ORDER BY params.client_id</sql><sql date="1504525746919" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT sum(hex_md5_to_bigint(md5(setting.key254::text))), sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))) FROM setting</sql><sql date="1504525738491" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT sum(ln(hex_md5_to_bigint(md5(setting.key254::text))), sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))) FROM setting</sql><sql date="1504530339287" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT params.client_id FROM "public".params
+UNION EXCEPT
+SELECT bkp_a_81.client_id FROM "public".bkp_a_81</sql><sql date="1504590696995" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*)
+FROM (
+SELECT * FROM "public".params
+EXCEPT 
+SELECT * FROM "public".bkp_a_81
+) as union_sub_query</sql><sql date="1504530132380" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT params.client_id FROM "public".params
+UNION
+SELECT params.client_id FROM "public".bkp_a_81</sql><sql date="1504525033614" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT md5(params.unique_name::text) FROM "public".params</sql><sql date="1504525184828" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT sum(hex_md5_to_bigint(md5(setting.key254::text))), sum(abs(hex_md5_to_bigint(md5(setting.blob_value::text)))) FROM setting</sql><sql date="1507526247893" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT datname, age(datfrozenxid) FROM pg_database WHERE pg_database.datname = "unipos_mc"</sql><sql date="1504527636168" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.id::text)),
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.product_group_id::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.product_id::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.product_designation::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.amount::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.measure_unit::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.measure_unit_id::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.currency::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.basic_unit_price_with_vat::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.basic_unit_price_without_vat::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.basic_total_price_without_vat::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.basic_total_price_with_vat::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.unit_price_with_vat::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.unit_price_without_vat::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.total_price_without_vat::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.total_price_with_vat::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.unit_cost_price_without_vat::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.total_cost_price_without_vat::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.price_type::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.Modification::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.ModificationType::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.ModificationValue::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.VAT_Code::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.VAT_TaxRate::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.VAT_coeficient::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.VAT::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.Excise_Code::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.DutyRate_Code::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.Excise::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.Excise_Rate::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.Excise_Units::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.invalid_price_type_id::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.problem_author_id::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.problem_author_login::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.problem_author_fullname::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.problem_reason::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.invalid_price_time::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.store_price_type_id::text)) ,  
+    md5_hex_to_bigint(md5( DISPNOTE_PRICES.store_price::text))  
+FROM DISPNOTE_PRICES LIMIT 500</sql><sql date="1504527754139" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT  
+    hex_to_bigint(md5( DISPNOTE_PRICES.id::text)),
+    hex_to_bigint(md5( DISPNOTE_PRICES.product_group_id::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.product_id::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.product_designation::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.amount::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.measure_unit::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.measure_unit_id::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.currency::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.basic_unit_price_with_vat::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.basic_unit_price_without_vat::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.basic_total_price_without_vat::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.basic_total_price_with_vat::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.unit_price_with_vat::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.unit_price_without_vat::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.total_price_without_vat::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.total_price_with_vat::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.unit_cost_price_without_vat::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.total_cost_price_without_vat::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.price_type::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.Modification::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.ModificationType::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.ModificationValue::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.VAT_Code::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.VAT_TaxRate::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.VAT_coeficient::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.VAT::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.Excise_Code::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.DutyRate_Code::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.Excise::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.Excise_Rate::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.Excise_Units::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.invalid_price_type_id::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.problem_author_id::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.problem_author_login::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.problem_author_fullname::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.problem_reason::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.invalid_price_time::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.store_price_type_id::text)) ,  
+    hex_to_bigint(md5( DISPNOTE_PRICES.store_price::text))  
+FROM DISPNOTE_PRICES LIMIT 1500</sql><sql date="1505458070170" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT NOW() AS DATE_TIME</sql><sql date="1504536050596" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT count(*) FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.type_name = BKP_A_81.type_name
+    AND PARAMS.type_string254 = BKP_A_81.type_string254
+    AND PARAMS.type_integer = BKP_A_81.type_integer
+    AND PARAMS.type_double = BKP_A_81.type_double
+    AND PARAMS.type_decimal = BKP_A_81.type_decimal
+    AND PARAMS.type_datetime = BKP_A_81.type_datetime
+    AND PARAMS.type_bool = BKP_A_81.type_bool
+    AND PARAMS.type_byte_array = BKP_A_81.type_byte_array
+)</sql><sql date="1504536549308" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT * FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.type_name = BKP_A_81.type_name
+    AND PARAMS.type_string254 = BKP_A_81.type_string254
+    ORDER BY BKP_A_81.client_id, BKP_A_81.user_id, BKP_A_81.type_name, BKP_A_81.type_string254
+                        )</sql><sql date="1505458059277" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT NOW()</sql><sql date="1504525001116" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT digest(params.client_id::text,'md5') FROM "public".params</sql><sql date="1504535980746" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT count(*) FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+)</sql><sql date="1504532251508" url="jdbc:postgresql://fserver:5432/unipos_mc">select distinct
+  p.*
+from
+  "public".params p
+  left outer join "public".bkp_a_81 p2 on p.client_id = p2.client_id                                       AND p.user_id = p2.user_id</sql><sql date="1504527959526" url="jdbc:postgresql://fserver:5432/unipos_mc">create or replace function bytea_md5_to_bigint(hexval bytea) returns bigint as $$
+select
+  (get_byte(x,0)::int8&lt;&lt;(7*8)) |
+  (get_byte(x,1)::int8&lt;&lt;(6*8)) |
+  (get_byte(x,2)::int8&lt;&lt;(5*8)) |
+  (get_byte(x,3)::int8&lt;&lt;(4*8)) |
+  (get_byte(x,4)::int8&lt;&lt;(3*8)) |
+  (get_byte(x,5)::int8&lt;&lt;(2*8)) |
+  (get_byte(x,6)::int8&lt;&lt;(1*8)) |
+  (get_byte(x,7)::int8)
+from (
+  select $1 as x
+) as a;
+$$
+language sql strict immutable</sql><sql date="1504526079016" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT * FROM "public".barcode LIMIT 3000</sql><sql date="1504531935786" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.id,'md5'))),
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_group_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_designation,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.amount,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.measure_unit,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.measure_unit_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.currency,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_unit_price_with_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_unit_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_total_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_total_price_with_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_price_with_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_price_with_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_cost_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_cost_price_without_vat,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.price_type,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Modification,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.ModificationType,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.ModificationValue,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_Code,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_TaxRate,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_coeficient,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Code,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.DutyRate_Code,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Rate,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Units,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.invalid_price_type_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_login,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_fullname,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_reason,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.invalid_price_time,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.store_price_type_id,'md5'))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.store_price,'md5')))  
+FROM DISPNOTE_PRICES LIMIT 1500</sql><sql date="1504590749532" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*)
+FROM (
+    (
+        SELECT * FROM "public".params
+        EXCEPT 
+        SELECT * FROM "public".bkp_a_81
+    )
+    UNION ALL
+    (
+        SELECT * FROM "public".bkp_a_81
+        EXCEPT 
+        SELECT * FROM "public".params
+    )
+) as union_sub_query</sql><sql date="1504530631245" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*)
+FROM (
+SELECT params.client_id,params.user_id,params.unique_name,params.type_name 
+FROM "public".params
+EXCEPT ALL
+SELECT bkp_a_81.client_id,bkp_a_81.user_id,bkp_a_81.unique_name,bkp_a_81.type_name 
+FROM "public".bkp_a_81
+) as union_sub_query</sql><sql date="1504536106083" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT count(*) FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.type_name = BKP_A_81.type_name
+    AND PARAMS.type_string254 = BKP_A_81.type_string254
+    AND PARAMS.type_integer = BKP_A_81.type_integer
+    AND PARAMS.type_double = BKP_A_81.type_double
+                )</sql><sql date="1504525007444" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT digest(params.client_id::text,'sha1') FROM "public".params</sql><sql date="1504527883163" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.id::text))),
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.product_group_id::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.product_id::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.product_designation::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.amount::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.measure_unit::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.measure_unit_id::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.currency::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.basic_unit_price_with_vat::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.basic_unit_price_without_vat::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.basic_total_price_without_vat::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.basic_total_price_with_vat::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.unit_price_with_vat::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.unit_price_without_vat::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.total_price_without_vat::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.total_price_with_vat::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.unit_cost_price_without_vat::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.total_cost_price_without_vat::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.price_type::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.Modification::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.ModificationType::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.ModificationValue::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.VAT_Code::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.VAT_TaxRate::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.VAT_coeficient::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.VAT::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.Excise_Code::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.DutyRate_Code::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.Excise::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.Excise_Rate::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.Excise_Units::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.invalid_price_type_id::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.problem_author_id::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.problem_author_login::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.problem_author_fullname::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.problem_reason::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.invalid_price_time::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.store_price_type_id::text))) ,  
+    sum(hex_to_bigint(md5( DISPNOTE_PRICES.store_price::text)))  
+FROM DISPNOTE_PRICES LIMIT 1500</sql><sql date="1504525921803" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT sum(ln(abs(hex_md5_to_bigint(md5(setting.key254::text))))), sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))) FROM setting</sql><sql date="1504525724339" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT sum(ln(abs(hex_md5_to_bigint(md5(setting.key254::text))))), sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))) FROM setting</sql><sql date="1504532127153" url="jdbc:postgresql://fserver:5432/unipos_mc">select distinct
+  p.*
+from
+  "public".params p
+  left outer join "public".bkp_a_81 p2 on p.client_id = p2.client_id where
+  p2.client_id is null</sql><sql date="1504702903166" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT  count( event_history.id )  AS count_of, event_history.event_code FROM public.event_history GROUP BY event_history.event_code ORDER BY count_of DESC</sql><sql date="1504533392853" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT count(*) FROM "public".params p
+FULL OUTER JOIN "public".bkp_a_81 p2 ON p.client_id = p2.client_id
+                                    AND p.user_id = p2.user_id
+WHERE p.client_id IS NULL OR p2.client_id IS NULL
+  AND p.user_id IS NULL OR p2.user_id IS NULL</sql><sql date="1504530275135" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT params.client_id FROM "public".params
+UNION
+SELECT bkp_a_81.client_id FROM "public".bkp_a_81</sql><sql date="1504525631345" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT sum(ln(abs(hex_md5_to_bigint(md5(setting.key254::text)))+37)), sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))) FROM setting</sql><sql date="1504590711976" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*)
+FROM (
+    SELECT * FROM "public".params
+    EXCEPT 
+    SELECT * FROM "public".bkp_a_81
+) as union_sub_query</sql><sql date="1504525253253" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT ln(abs(sum(hex_md5_to_bigint(md5(setting.blob_value::text))))), sum(abs(hex_md5_to_bigint(md5(setting.blob_value::text)))) FROM setting</sql><sql date="1507526065395" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT * FROM "public".auth_center_request LIMIT 3000</sql><sql date="1507526070411" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT c.oid::regclass as table_name,
+       greatest(age(c.relfrozenxid),age(t.relfrozenxid)) as age
+FROM pg_class c
+LEFT JOIN pg_class t ON c.reltoastrelid = t.oid
+WHERE c.relkind = 'r'</sql><sql date="1504525643778" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT sum(ln(abs(hex_md5_to_bigint(md5(setting.key254::text)))+1)), sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))) FROM setting</sql><sql date="1504530260494" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT params.client_id FROM "public".params
+UNION
+SELECT bkp_a_81.client_id FROM "public".bkp_a_81
+ORDER BY params.client_id</sql><sql date="1507526547229" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT age(datfrozenxid) FROM pg_database WHERE pg_database.datname = unipos_mc</sql><sql date="1504536572022" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT * FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.type_name = BKP_A_81.type_name
+    AND PARAMS.type_string254 = BKP_A_81.type_string254
+    ORDER BY BKP_A_81.client_id, BKP_A_81.user_id, BKP_A_81.type_name, BKP_A_81.type_string254
+                        )
+ORDER BY PARAMS.client_id, PARAMS.user_id, PARAMS.type_name, PARAMS.type_string254</sql><sql date="1504527678478" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.id::text)),
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.product_group_id::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.product_id::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.product_designation::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.amount::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.measure_unit::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.measure_unit_id::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.currency::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.basic_unit_price_with_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.basic_unit_price_without_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.basic_total_price_without_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.basic_total_price_with_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.unit_price_with_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.unit_price_without_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.total_price_without_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.total_price_with_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.unit_cost_price_without_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.total_cost_price_without_vat::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.price_type::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.Modification::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.ModificationType::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.ModificationValue::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.VAT_Code::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.VAT_TaxRate::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.VAT_coeficient::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.VAT::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.Excise_Code::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.DutyRate_Code::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.Excise::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.Excise_Rate::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.Excise_Units::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.invalid_price_type_id::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.problem_author_id::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.problem_author_login::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.problem_author_fullname::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.problem_reason::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.invalid_price_time::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.store_price_type_id::text)) ,  
+    hex_md5_to_bigint(md5( DISPNOTE_PRICES.store_price::text))  
+FROM DISPNOTE_PRICES LIMIT 1500</sql><sql date="1504525456385" url="jdbc:postgresql://fserver:5432/unipos_pc">create or replace function hex_md5_to_bigint(hexval text) returns bigint as $$
+select
+  (get_byte(x,0)::int8&lt;&lt;(7*8)) |
+  (get_byte(x,1)::int8&lt;&lt;(6*8)) |
+  (get_byte(x,2)::int8&lt;&lt;(5*8)) |
+  (get_byte(x,3)::int8&lt;&lt;(4*8)) |
+  (get_byte(x,4)::int8&lt;&lt;(3*8)) |
+  (get_byte(x,5)::int8&lt;&lt;(2*8)) |
+  (get_byte(x,6)::int8&lt;&lt;(1*8)) |
+  (get_byte(x,7)::int8)
+from (
+  select decode(lpad($1, 16, '0'), 'hex') as x
+) as a;
+$$
+language sql strict immutable</sql><sql date="1504536351957" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT count(*) FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.type_name = BKP_A_81.type_name
+    AND PARAMS.type_string254 = BKP_A_81.type_string254
+                        )</sql><sql date="1504528101515" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.id::text,'md5')))),
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_group_id::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_id::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.product_designation::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.amount::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.measure_unit::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.measure_unit_id::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.currency::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_unit_price_with_vat::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_unit_price_without_vat::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_total_price_without_vat::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.basic_total_price_with_vat::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_price_with_vat::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_price_without_vat::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_price_without_vat::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_price_with_vat::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.unit_cost_price_without_vat::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.total_cost_price_without_vat::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.price_type::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Modification::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.ModificationType::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.ModificationValue::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_Code::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_TaxRate::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT_coeficient::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.VAT::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Code::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.DutyRate_Code::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Rate::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.Excise_Units::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.invalid_price_type_id::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_id::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_login::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_author_fullname::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.problem_reason::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.invalid_price_time::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.store_price_type_id::text,'md5')))) ,  
+    sum(bytea_md5_to_bigint(digest(DISPNOTE_PRICES.store_price::text,'md5'))))  
+FROM DISPNOTE_PRICES LIMIT 1500</sql><sql date="1504536342168" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT count(*) FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.type_name = BKP_A_81.type_name
+                            )</sql><sql date="1504525609468" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT sum(ln(abs(hex_md5_to_bigint(md5(setting.key254::text))+37))), sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))) FROM setting</sql><sql date="1504525383364" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))), sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))) FROM setting</sql><sql date="1504530924066" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*)
+FROM (
+SELECT params.client_id,params.user_id,params.unique_name,params.type_name,params.type_string254,params.type_byte_array
+FROM "public".params
+EXCEPT ALL
+SELECT bkp_a_81.client_id,bkp_a_81.user_id,bkp_a_81.unique_name,bkp_a_81.type_name,bkp_a_81.type_string254,bkp_a_81.type_byte_array
+FROM "public".bkp_a_81
+) as union_sub_query</sql><sql date="1504532372062" url="jdbc:postgresql://fserver:5432/unipos_mc">select distinct
+  p.*
+from
+  "public".params p
+  left outer join "public".bkp_a_81 p2 on p.client_id = p2.client_id                                       AND p.user_id = p2.user_id
+where
+    p2.client_id is null and p2.user_id is null</sql><sql date="1504591572195" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*)
+FROM (
+    (
+        SELECT * FROM "public".DISPNOTE_PRICES
+        EXCEPT 
+        SELECT * FROM "public".bkp_a_55
+    )
+    UNION 
+    (
+        SELECT * FROM "public".bkp_a_55
+        EXCEPT 
+        SELECT * FROM "public".DISPNOTE_PRICES
+    )
+)</sql><sql date="1504533456502" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*) FROM (
+        SELECT p.client_id, p.user_id, p.unique_name from "public".params p
+    where not exists(
+        SELECT p2.client_id, p2.user_id, p2.unique_name from "public".bkp_a_81 p2 
+         where p.client_id = p2.client_id
+           AND p.user_id = p2.user_id
+           AND p.unique_name = p2.unique_name
+    )
+) as union_sub_query</sql><sql date="1504530348295" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT params.client_id FROM "public".params
+ EXCEPT
+SELECT bkp_a_81.client_id FROM "public".bkp_a_81</sql><sql date="1504536102227" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT count(*) FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.type_name = BKP_A_81.type_name
+    AND PARAMS.type_string254 = BKP_A_81.type_string254
+    AND PARAMS.type_integer = BKP_A_81.type_integer
+    AND PARAMS.type_double = BKP_A_81.type_double
+    AND PARAMS.type_decimal = BKP_A_81.type_decimal
+    AND PARAMS.type_datetime = BKP_A_81.type_datetime
+        )</sql><sql date="1504535995977" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT count(*) FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.unique_name = BKP_A_81.unique_name
+)</sql><sql date="1504536432960" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT * FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.type_name = BKP_A_81.type_name
+                            )</sql><sql date="1504525865948" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT ln(abs(sum(hex_md5_to_bigint(md5(setting.key254::text))))), sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))) FROM setting</sql><sql date="1504525828773" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT ln(abs(sum(hex_md5_to_bigint(md5(setting.key254::text))))), sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))) FROM setting</sql><sql date="1504536100500" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT count(*) FROM PARAMS 
+WHERE NOT EXISTS(
+    SELECT * from BKP_A_81 WHERE 
+        PARAMS.CLIENT_ID = BKP_A_81.CLIENT_ID
+    AND PARAMS.user_id = BKP_A_81.user_id
+    AND PARAMS.type_name = BKP_A_81.type_name
+    AND PARAMS.type_string254 = BKP_A_81.type_string254
+    AND PARAMS.type_integer = BKP_A_81.type_integer
+    AND PARAMS.type_double = BKP_A_81.type_double
+    AND PARAMS.type_decimal = BKP_A_81.type_decimal
+    AND PARAMS.type_datetime = BKP_A_81.type_datetime
+    AND PARAMS.type_bool = BKP_A_81.type_bool
+    )</sql><sql date="1504525296377" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT sum(ln(abs(hex_md5_to_bigint(md5(setting.blob_value::text))))), sum(abs(hex_md5_to_bigint(md5(setting.blob_value::text)))) FROM setting</sql><sql date="1504524929508" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT digest(params.client_id::text,'md5')::bigint FROM "public".params</sql><sql date="1504532357497" url="jdbc:postgresql://fserver:5432/unipos_mc">select distinct
+  p.*
+from
+  "public".params p
+  left outer join "public".bkp_a_81 p2 on p.client_id = p2.client_id                                       AND p.user_id = p2.user_id
+where
+    p.client_id is null and p.user_id is null</sql><sql date="1504531672206" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT p.client_id from "public".params p
+where exists(
+    SELECT p2.client_id from "public".bkp_a_81 p2 where p.client_id = p2.client_id
+)</sql><sql date="1504525718876" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT * FROM "public".setting LIMIT 3000</sql><sql date="1507527147699" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT datname, age(datfrozenxid) FROM pg_database</sql><sql date="1504591600717" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*)
+FROM (
+    (
+        SELECT * FROM "public".DISPNOTE_PRICES
+        EXCEPT 
+        SELECT * FROM "public".bkp_a_55
+    )
+    UNION 
+    (
+        SELECT * FROM "public".bkp_a_55
+        EXCEPT 
+        SELECT * FROM "public".DISPNOTE_PRICES
+    )
+) AS foo</sql><sql date="1504530311094" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT params.client_id FROM "public".params
+UNION ALL
+SELECT bkp_a_81.client_id FROM "public".bkp_a_81</sql><sql date="1504525192794" url="jdbc:postgresql://fserver:5432/unipos_pc">SELECT sum(hex_md5_to_bigint(md5(setting.blob_value::text))), sum(abs(hex_md5_to_bigint(md5(setting.blob_value::text)))) FROM setting</sql><sql date="1507526299568" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT age(datfrozenxid) FROM pg_database WHERE pg_database.datname = 'unipos_mc'</sql><sql date="1504535919199" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT * FROM "public".params LIMIT 3000</sql><sql date="1504526146665" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT hex_md5_to_bigint(md5(customer.primary_id::text)) FROM customer</sql><sql date="1504530395293" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT params.client_id FROM "public".params
+EXCEPT ALL
+SELECT bkp_a_81.client_id FROM "public".bkp_a_81</sql><sql date="1504531470309" url="jdbc:postgresql://fserver:5432/unipos_mc">SELECT COUNT(*)
+FROM (
+SELECT params.client_id,params.user_id,params.unique_name,params.type_name,params.type_string254,params.type_byte_array
+FROM "public".params
+EXCEPT 
+SELECT bkp_a_81.client_id,bkp_a_81.user_id,bkp_a_81.unique_name,bkp_a_81.type_name,bkp_a_81.type_string254,bkp_a_81.type_byte_array
+FROM "public".bkp_a_81
+) as union_sub_query</sql></history>

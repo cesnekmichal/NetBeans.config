@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="org-netbeans-modules-git-ui-blame-AnnotateAction.shadow">
+        <attr name="position" intvalue="500"/>
+    </fileobject>
+    <fileobject name="org-netbeans-modules-git-ui-commit-CommitAction.shadow">
+        <attr name="position" intvalue="100"/>
+    </fileobject>
+    <fileobject name="org-netbeans-modules-git-ui-conflicts-ResolveConflictsAction.shadow">
+        <attr name="position" intvalue="600"/>
+    </fileobject>
+    <fileobject name="org-netbeans-modules-git-ui-fetch-PullFromUpstreamAction.shadow">
+        <attr name="position" intvalue="300"/>
+    </fileobject>
+    <fileobject name="org-netbeans-modules-git-ui-push-PushToUpstreamAction.shadow">
+        <attr name="position" intvalue="400"/>
+    </fileobject>
+    <fileobject name="org-netbeans-modules-git-ui-status-StatusAction.shadow">
+        <attr name="position" intvalue="450"/>
+    </fileobject>
+</attributes>

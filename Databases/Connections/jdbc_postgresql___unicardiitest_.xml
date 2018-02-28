@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+<!DOCTYPE connection PUBLIC '-//NetBeans//DTD Database Connection 1.2//EN' 'http://www.netbeans.org/dtds/connection-1_2.dtd'>
+<connection>
+  <driver-class value='org.postgresql.Driver'/>
+  <driver-name value='Postgres'/>
+  <database-url value='jdbc:postgresql://unicardiitest:5432/postgres'/>
+  <schema value='public'/>
+  <user value='postgres'/>
+  <display-name value='PostgreSQL-unicatdiitest-postgres'/>
+  <use-scrollable-cursors value='false'/>
+</connection>

@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<!DOCTYPE driver PUBLIC '-//NetBeans//DTD JDBC Driver 1.1//EN' 'http://www.netbeans.org/dtds/jdbc-driver-1_1.dtd'>
+<driver>
+  <name value='Oracle OCI (1)'/>
+  <display-name value='Oracle OCI (1)'/>
+  <class value='oracle.jdbc.driver.OracleDriver'/>
+  <urls>
+    <url value='file:/C:/Users/Michal/Downloads/ojdbc7.jar'/>
+  </urls>
+</driver>

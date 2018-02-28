@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="org-netbeans-modules-mercurial-ui-annotate-AnnotateAction.shadow">
+        <attr name="position" intvalue="400"/>
+    </fileobject>
+    <fileobject name="org-netbeans-modules-mercurial-ui-commit-CommitAction.shadow">
+        <attr name="position" intvalue="100"/>
+    </fileobject>
+    <fileobject name="org-netbeans-modules-mercurial-ui-pull-PullCurrentBranchAction.shadow">
+        <attr name="position" intvalue="200"/>
+    </fileobject>
+    <fileobject name="org-netbeans-modules-mercurial-ui-push-PushCurrentBranchAction.shadow">
+        <attr name="position" intvalue="300"/>
+    </fileobject>
+    <fileobject name="org-netbeans-modules-mercurial-ui-status-StatusAction.shadow">
+        <attr name="position" intvalue="350"/>
+    </fileobject>
+    <fileobject name="org-netbeans-modules-mercurial-ui-update-Action.ResolveConflicts.shadow">
+        <attr name="position" intvalue="500"/>
+    </fileobject>
+    <fileobject name="org-netbeans-modules-profiler-actions-SelfSamplerAction.shadow">
+        <attr name="position" intvalue="100001"/>
+    </fileobject>
+</attributes>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="run" name="release to T - final release ">
+    <target name="run">
+        <ant antfile="C:\UNIDATAZ\UniPOS.NBp\release.xml" inheritall="false" target="unipos-final-release"/>
+    </target>
+</project>

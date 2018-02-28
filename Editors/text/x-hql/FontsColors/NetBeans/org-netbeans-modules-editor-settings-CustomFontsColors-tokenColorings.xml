@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor default="identifier" name="identifier"/>
+    <fontcolor default="number" name="number"/>
+    <fontcolor name="character"/>
+    <fontcolor default="string" name="string"/>
+    <fontcolor name="PE"/>
+    <fontcolor name="GAP"/>
+    <fontcolor default="comment" name="comment"/>
+    <fontcolor foreColor="blue" name="keyword">
+        <font style="bold"/>
+    </fontcolor>
+    <fontcolor default="error" name="error"/>
+    <fontcolor default="whitespace" name="whitespace"/>
+    <fontcolor foreColor="green" name="operator">
+        <font style="bold"/>
+    </fontcolor>
+</fontscolors>

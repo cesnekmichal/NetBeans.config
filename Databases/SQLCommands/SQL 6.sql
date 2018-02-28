@@ -1,0 +1,1 @@
+SELECT digest('blah', 'sha256');

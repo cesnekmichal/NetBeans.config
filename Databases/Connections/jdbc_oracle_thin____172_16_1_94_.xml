@@ -1,0 +1,11 @@
+<?xml version='1.0'?>
+<!DOCTYPE connection PUBLIC '-//NetBeans//DTD Database Connection 1.2//EN' 'http://www.netbeans.org/dtds/connection-1_2.dtd'>
+<connection>
+  <driver-class value='oracle.jdbc.OracleDriver'/>
+  <driver-name value='Oracle Thin (1)'/>
+  <database-url value='jdbc:oracle:thin:@//172.16.1.94:1521/OCBTST'/>
+  <schema value='A_TANKFA_01'/>
+  <user value='A_TANKFA_02'/>
+  <display-name value='TPCA-jdbc:oracle:thin:@//172.16.1.94:1521/OCBTST [A_TANKFA_02 on Default schema]'/>
+  <use-scrollable-cursors value='true'/>
+</connection>

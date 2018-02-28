@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bindings PUBLIC "-//NetBeans//DTD Editor KeyBindings settings 1.1//EN" "http://www.netbeans.org/dtds/EditorKeyBindings-1_1.dtd">
+<bindings>
+    <bind actionName="toggle-comment" key="D-DIVIDE"/>
+    <bind key="SD-C" remove="true"/>
+    <bind key="SD-ADD" remove="true"/>
+    <bind key="SD-PLUS" remove="true"/>
+    <bind key="SD-EQUALS" remove="true"/>
+    <bind key="S-SPACE" remove="true"/>
+    <bind key="S-F10" remove="true"/>
+    <bind key="O-E" remove="true"/>
+</bindings>

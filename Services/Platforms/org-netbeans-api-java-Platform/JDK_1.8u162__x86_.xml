@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE platform PUBLIC "-//NetBeans//DTD Java PlatformDefinition 1.0//EN" "http://www.netbeans.org/dtds/java-platformdefinition-1_0.dtd">
+<platform default="no" name="JDK 1.8u162 (x86)">
+    <jdkhome>
+        <resource>file:/C:/Program%20Files%20(x86)/Java/jdk1.8.0_162/</resource>
+    </jdkhome>
+    <properties>
+        <property name="platform.ant.name" value="JDK_1.8u162__x86_"/>
+    </properties>
+    <sysproperties>
+        <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+        <property name="file.encoding" value="Cp1250"/>
+        <property name="file.encoding.pkg" value="sun.io"/>
+        <property name="file.separator" value="\"/>
+        <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+        <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+        <property name="java.class.path" value=""/>
+        <property name="java.class.version" value="52.0"/>
+        <property name="java.endorsed.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_162\jre\lib\endorsed"/>
+        <property name="java.ext.dirs" value="C:\Program Files (x86)\Java\jdk1.8.0_162\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+        <property name="java.home" value="C:\Program Files (x86)\Java\jdk1.8.0_162\jre"/>
+        <property name="java.io.tmpdir" value="C:\Users\Michal\AppData\Local\Temp\"/>
+        <property name="java.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_162\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Mercurial;C:\Users\Michal\AppData\Local\Microsoft\WindowsApps;;."/>
+        <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+        <property name="java.runtime.version" value="1.8.0_162-b12"/>
+        <property name="java.specification.name" value="Java Platform API Specification"/>
+        <property name="java.specification.vendor" value="Oracle Corporation"/>
+        <property name="java.specification.version" value="1.8"/>
+        <property name="java.vendor" value="Oracle Corporation"/>
+        <property name="java.vendor.url" value="http://java.oracle.com/"/>
+        <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+        <property name="java.version" value="1.8.0_162"/>
+        <property name="java.vm.info" value="mixed mode"/>
+        <property name="java.vm.name" value="Java HotSpot(TM) Client VM"/>
+        <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+        <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+        <property name="java.vm.specification.version" value="1.8"/>
+        <property name="java.vm.vendor" value="Oracle Corporation"/>
+        <property name="java.vm.version" value="25.162-b12"/>
+        <property name="line.separator" value="&#13;&#10;"/>
+        <property name="os.arch" value="x86"/>
+        <property name="os.name" value="Windows 10"/>
+        <property name="os.version" value="10.0"/>
+        <property name="path.separator" value=";"/>
+        <property name="sun.arch.data.model" value="32"/>
+        <property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.8.0_162\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.8.0_162\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.8.0_162\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.8.0_162\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.8.0_162\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.8.0_162\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.8.0_162\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.8.0_162\jre\classes"/>
+        <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_162\jre\bin"/>
+        <property name="sun.cpu.endian" value="little"/>
+        <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
+        <property name="sun.desktop" value="windows"/>
+        <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+        <property name="sun.java.command" value="org.netbeans.modules.java.j2seplatform.wizard.SDKProbe C:\Users\Michal\AppData\Local\Temp\nb-platformdetect8486231526728273866properties"/>
+        <property name="sun.java.launcher" value="SUN_STANDARD"/>
+        <property name="sun.jnu.encoding" value="Cp1250"/>
+        <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
+        <property name="sun.os.patch.level" value=""/>
+        <property name="user.country" value="CZ"/>
+        <property name="user.dir" value=""/>
+        <property name="user.home" value="C:\Users\Michal"/>
+        <property name="user.language" value="cs"/>
+        <property name="user.name" value="Michal"/>
+        <property name="user.script" value=""/>
+        <property name="user.timezone" value="Europe/Prague"/>
+        <property name="user.variant" value=""/>
+    </sysproperties>
+</platform>

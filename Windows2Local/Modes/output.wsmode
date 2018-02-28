@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mode version="2.4">
+    <name unique="output"  />
+  <kind type="view" />
+  <state type="separated"  />
+  <constraints>
+    <path orientation="horizontal" number="101" weight="0.5"/>
+  </constraints>
+  <bounds x="1920" y="57" width="1279" height="976" />
+  <frame state="0"/>
+    <active-tc  id="output"  prev-id="breakpointsView" />
+    <empty-behavior permanent="true"/>
+</mode>
